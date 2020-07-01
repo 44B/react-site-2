@@ -1,0 +1,18 @@
+#sweetsList {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+    margin: 3px;
+}
+
+img {
+    height: 400px;
+    width: 300px;
+}
