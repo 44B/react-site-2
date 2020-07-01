@@ -1,12 +1,52 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Page Title</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Page Title</title>
+    <link rel="stylesheet" href="app.css" />
 </head>
 <body>
-
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-
+    <div class="container title">
+        <h1>Candy Shop</h1>
+    </div>
+    <div class="container">
+        <div class="topNav">
+            <a href=#>Home</a>
+            <a href=#>About</a>
+            <a href=#>Store</a>
+            <div class="topNavRight">
+                <a href=#>Contact</a>
+                <a href=#>Cart</a>
+            </div>  
+        </div>
+    </div>
+    <div class="container">
+        <h2>Welcome</h2>
+    </div>
+    <div class="container">
+        <div class="leftSide">
+            About
+        </div>
+        <div class="rightSide">
+            <img>
+        </div>
+    </div>
+    <div class="container">
+        <h1>In Stock*</h1>
+        <div class="btnSelect">
+            <button>All</button>
+            <button>Donuts</button>
+            <button>Cupcakes</button>
+            <button>Cookies</button>
+            <button>Pazookies</button>
+        </div>
+        <div>
+            <input type="text" id="search">
+        </div>
+        <div>
+            <ul id="sweetList"></ul>
+        </div>
+    </div>
 </body>
 </html>
