@@ -1,21 +1,37 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: 'Cormorant', serif;
 }
 
 .max-height {
-    min-height: 75vh;
+    min-height:75vh;
     background: linear-gradient(rgba(255, 231, 154, 0.46), rgba(255, 227, 137, 0.46)), url("http://wallpapercrafter.com/uploads/posts/61832-___germany-dessert-food-and-waffle-hd.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    position: relative;
+}
+
+strong {
+    font-family: 'Galada', cursive;
+}
+
+.fontColor {
+    color: #E94F37;
+}
+
+.center-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-bar {
     display: flex;
     align-items: center;
-    background: #F6F7EB;
+    overflow: auto;
 }
 
 .nav-links {
@@ -26,6 +42,9 @@ body {
 .nav-links li {
     margin-right: 1em;
     display: inline;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
 }
 
 .cart-info {
@@ -35,6 +54,8 @@ body {
     background-color:#E94F37;
     display: flex;
     align-items: center;
+    margin: 0;
+    float: right;
 }
 
 .cart-info img {
@@ -60,7 +81,21 @@ body {
 
 .welcome-section {
     text-align: center;
-    display: grid;
+}
+
+#welcome-section-title {
+    margin: 0;
+    font-size: 500%;
+    color: black;
+}
+
+.welcome-section-explore-link {
+    text-decoration: none;
+    color: #E94F37;
+    padding: 2px 6px 2px 6px;
+    font-family: 'Galada', cursive;
+    font-size: 300%;
+    
 }
 
 .about-section {
@@ -68,21 +103,22 @@ body {
     align-items:center;
     justify-content: space-between;
     color: #000000;
+    margin: 3em 3em 3em 3em;
 }
 
 .about-section img {
-    height: 400px;
-    width: 325px;
+    height: 450px;
+    width: 700px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.about-section-left-side {
-    width: 45%;
-    margin: 5px;
+.about-section-left-side h1 {
+    font-size: 100px;
 }
 
-.about-section-right-side {
-    float: right;
+.about-section-left-side p {
+    margin-right: 100px;
+    font-size: 150%;
 }
 
 .about-section-clear-fix {

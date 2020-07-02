@@ -8,7 +8,7 @@ let imgs = [];
 
 let createImage = (src, label, caption, dataItem) => {
     label = label.replace(/"/g,"&quot;");
-    caption = `<p>${caption}</p>`
+    caption = `<br><a>${caption}</a><br>`
     return '<img src="'+src+'" title="'+label+'" alt="'+label+'" data-item="'+dataItem+'"/>' + caption;
 }
 
