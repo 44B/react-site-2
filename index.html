@@ -24,13 +24,21 @@
     <div class="container">
         <h2>Welcome</h2>
     </div>
-    <div class="container">
-        <div class="leftSide">
-            About
-        </div>
-        <div class="rightSide">
-            <img>
-        </div>
+    <div class="container aboutSection">
+            <div class="leftSide">
+                <h1>About</h1>
+                <p>
+                    What is Lorem Ipsum?
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                    when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into 
+                    electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, 
+                    and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                </p>
+            </div>
+            <div class="rightSide">
+                <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yMTg5MzE0NC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYwMTgxNDI0MH0.FUS4T5vSvzWZRs4L-5DYQqW8QxsepgbjI3HjAR5vsRQ/img.jpg?width=980">
+            </div>
+            <div class="clearfix">&nbsp;</div>
     </div>
     <div class="container">
         <h1>In Stock*</h1>
@@ -39,16 +47,16 @@
             <button>Donuts</button>
             <button>Cupcakes</button>
             <button>Cookies</button>
-            <button>Pazookies</button>
         </div>
         <div>
             <input 
-                type="text" 
-                id="search"
+                type="search" 
+                id="searchBar"
                 name="searchBar"
             >
         </div>
         <div id="sweetsList"></div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
