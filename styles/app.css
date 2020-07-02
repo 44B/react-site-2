@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.max-height {
+    min-height: 75vh;
+    background: linear-gradient(rgba(255, 231, 154, 0.46), rgba(255, 227, 137, 0.46)), url("http://wallpapercrafter.com/uploads/posts/61832-___germany-dessert-food-and-waffle-hd.jpg");
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.nav-bar {
+    display: flex;
+    align-items: center;
+    background: #F6F7EB;
+}
+
+.nav-links {
+   margin-left: 4em;
+   list-style-type: none;
+}
+
+.nav-links li {
+    margin-right: 1em;
+    display: inline;
+}
+
+.cart-info {
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255, 255, 255, 0);
+    background-color:#E94F37;
+    display: flex;
+    align-items: center;
+}
+
+.cart-info img {
+    height: 30px;
+    width: 30px;
+}
+
+#cart-info-button {
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color:#E94F37;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.cart-info:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+.welcome-section {
+    text-align: center;
+    display: grid;
+}
+
+.about-section {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    color: #000000;
+}
+
+.about-section img {
+    height: 400px;
+    width: 325px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.about-section-left-side {
+    width: 45%;
+    margin: 5px;
+}
+
+.about-section-right-side {
+    float: right;
+}
+
+.about-section-clear-fix {
+    clear: both;
+    font-size: 1px;
+}
+
+.single-item-sweets-list-filter {
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.single-item-sweets-list-filter-btns button {
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.16em solid rgba(255, 255, 255, 0);
+    box-sizing: border-box;
+    text-decoration: none;
+    background-color:#E94F37;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+}
+
+.single-item-sweets-list-filter-btns button:hover {
+    border-color: rgba(255, 255, 255, 1);
+}
+
+
+#search-bar {
+    margin-top: 2em;
+}
+
+#single-item-sweets-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+#single-item-sweets-list li {
+    list-style: none;
+    display: inline-block;
+    margin: 3px;
+}
+
+.single-item-sweets img {
+    height: 400px;
+    width: 325px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}

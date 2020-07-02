@@ -1,7 +1,7 @@
 const id = (id) => { return document.getElementById(id); }
 //Displaying array of Item Picturees w/ Captions
-const sweetsList = id('sweetsList');
-const searchBar = id('searchBar');
+const sweetsList = id('single-item-sweets-list');
+const searchBar = id('search-bar');
 let nHTML = '';
 
 let imgs = [];
@@ -27,7 +27,7 @@ imgs.forEach((img) => {
 console.log(imgs);
 
 const displayImage = () => {
-    return document.getElementById("sweetsList").innerHTML = '<ul>' + nHTML + '<ul>';
+    return sweetsList.innerHTML = '<ul>' + nHTML + '<ul>';
 }
 displayImage();
 
@@ -44,7 +44,8 @@ searchBar.addEventListener('keyup', (e) => {
     }
 });
 
-    
+//cart button info
+
 /*
 Links that helped:
 https://www.w3schools.com/jsref/jsref_foreach.asp

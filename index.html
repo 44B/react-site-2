@@ -4,28 +4,39 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Page Title</title>
-    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="styles/app.css" />
 </head>
 <body>
-    <div class="container title">
-        <h1>Candy Shop</h1>
-    </div>
-    <div class="container">
-        <div class="topNav">
-            <a href=#>Home</a>
-            <a href=#>About</a>
-            <a href=#>Store</a>
-            <div class="topNavRight">
+    <div class="container nav-bar">
+        <a href=#>
+            <img src="https://cdn1.iconfinder.com/data/icons/DarkGlass_Reworked/128x128/apps/cookie.png">
+        </a>
+        <ul class="nav-links">
+            <li>
+                <a href=#>Home</a>
+            </li>
+            <li>
+                <a href="#about-section">About</a>
+            </li>
+            <li>
                 <a href=#>Contact</a>
-                <a href=#>Cart</a>
-            </div>  
+            </li>
+            <li>
+                <a href=#>Order</a>
+            </li>
+        </ul>
+        <div class="cart-info">
+            <img src="https://cdn0.iconfinder.com/data/icons/typicons-2/24/shopping-cart-64.png">
+            <button id="cart-info-button">Cart</button>
+            <div id="cart-info-item-count"></div>
         </div>
     </div>
-    <div class="container">
-        <h2>Welcome</h2>
+    <div class="container welcome-section max-height">
+        <h1>Welcome to the <strong>Sugar Shop</strong></h1>
+        <a href="#store">Explore</a>
     </div>
-    <div class="container aboutSection">
-            <div class="leftSide">
+    <div class="container about-section" id="about-section">
+            <div class="about-section-left-side">
                 <h1>About</h1>
                 <p>
                     What is Lorem Ipsum?
@@ -35,28 +46,32 @@
                     and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
                 </p>
             </div>
-            <div class="rightSide">
+            <div class="about-section-right-side">
                 <img src="https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8yMTg5MzE0NC9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTYwMTgxNDI0MH0.FUS4T5vSvzWZRs4L-5DYQqW8QxsepgbjI3HjAR5vsRQ/img.jpg?width=980">
             </div>
-            <div class="clearfix">&nbsp;</div>
+            <div class="about-section-clear-fix">&nbsp;</div>
     </div>
-    <div class="container">
-        <h1>In Stock*</h1>
-        <div class="btnSelect">
-            <button>All</button>
-            <button>Donuts</button>
-            <button>Cupcakes</button>
-            <button>Cookies</button>
+    <div class="container single-item-sweets" id="store">
+        <div class="single-item-sweets-list-filter">
+            <h1>Single Items</h1>
+            <div class="single-item-sweets-list-filter-btns">
+                <button>All</button>
+                <button>Donuts</button>
+                <button>Cupcakes</button>
+                <button>Cookies</button>
+            </div>
+            <div>
+                <input 
+                    type="search" 
+                    id="search-bar"
+                    name="searchBar"
+                >
+            </div>
         </div>
-        <div>
-            <input 
-                type="search" 
-                id="searchBar"
-                name="searchBar"
-            >
-        </div>
-        <div id="sweetsList"></div>
+        <div id="single-item-sweets-list"></div>
     </div>
     <script src="app.js"></script>
 </body>
 </html>
+
+
