@@ -33,12 +33,12 @@ displayImage();
 
 //searchFilter
 searchBar.addEventListener('keyup', (e) => {
-    let pTags = sweetsList.getElementsByTagName("p"); //Get All p Elements
+    let aTags = sweetsList.getElementsByTagName("a"); //Get All p Elements
     let searchText = e.target.value.toLowerCase(); //Get written in input
     if (searchText != "") {
-      for (let i = 0; i < pTags.length; i++) { //Loop to check every p content with input value
-         if (pTags[i].textContent != searchText) { //if p content not equal input value
-            pTags[i].parentElement.style.display = "none"; //Hide Parent
+      for (let i = 0; i < aTags.length; i++) { //Loop to check every p content with input value
+         if (aTags[i].textContent != searchText) { //if p content not equal input value
+            aTags[i].parentElement.style.display = "none"; //Hide Parent
            }
         }
     }
