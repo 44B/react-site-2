@@ -45,7 +45,10 @@ searchBar.addEventListener('keyup', (e) => {
 });
 
 //cart button info
-
+let cartInfoButton = id('cart-info-btn');
+cartInfoButton.addEventListener('click', (e) => {
+    console.log(e.target.value);
+});
 /*
 Links that helped:
 https://www.w3schools.com/jsref/jsref_foreach.asp

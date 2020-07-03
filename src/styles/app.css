@@ -32,6 +32,15 @@ strong {
     display: flex;
     align-items: center;
     overflow: auto;
+    padding: 1em 1em 1em 1em;
+    border-style: solid;
+    border-color: rgba(112, 108, 97, 0.64);
+
+}
+
+.nav-bar img {
+    height: 65px;
+    width: 65px;
 }
 
 .nav-links {
@@ -63,7 +72,7 @@ strong {
     width: 30px;
 }
 
-#cart-info-button {
+#cart-info-btn {
     padding:0.3em 1.2em;
     margin:0 0.1em 0.1em 0;
     border:0.16em solid rgba(255, 255, 255, 0);
@@ -126,10 +135,18 @@ strong {
     font-size: 1px;
 }
 
+#store {
+    background:rgba(255, 90, 95, 0.1);
+    padding: 3em 3em 3em 3em;
+}
 .single-item-sweets-list-filter {
     flex-direction: row;
     justify-content: center;
     text-align: center;
+}
+
+.single-item-sweets-list-filter h1 {
+    font-size: 350%;
 }
 
 .single-item-sweets-list-filter-btns button {
@@ -166,8 +183,12 @@ strong {
     margin: 3px;
 }
 
+#single-item-sweets-list a {
+    font-size: 150%;
+}
+
 .single-item-sweets img {
     height: 400px;
     width: 325px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 }
