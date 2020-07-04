@@ -13,6 +13,7 @@ module.exports = {
             exclude: /node_modules/
     }, {
         test: /\.s?css$/,
+        include: /styles/,
         use: [
             'style-loader',
             'css-loader',
