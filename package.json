@@ -1,0 +1,13 @@
+{
+  "name": "sugarShop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mohur/sugarShop.git",
+  "author": "mohur <m.ashrahfi@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
