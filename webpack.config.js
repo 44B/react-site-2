@@ -3,10 +3,6 @@ const path = require('path');
 module.exports = {
     entry: { 
         app: './src/app.js',
-        support: {
-            products: './src/component/products.js',
-            productsRender: './src/component/productsRender.js'
-        },
     },
     output: {
         path: path.join(__dirname, 'public'),
@@ -14,8 +10,8 @@ module.exports = {
     },
     module: {
         rules: [{
-            loader: 'babel-loader',
             test: /\.js$/,
+            loader: 'babel-loader',
             exclude: /node_modules/
     }, {
         test: /\.s?css$/,
@@ -28,6 +24,8 @@ module.exports = {
         }]
     },
     devServer: {
+        inline: false,
         contentBase: path.join(__dirname, 'public')
+
     }
 };
