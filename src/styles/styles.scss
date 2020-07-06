@@ -177,20 +177,20 @@ strong {
     margin-top: 2em;
 }
 
-#single-item-sweets-list {
+.single-product-list {
     display: flex;
     flex-direction: row;
     justify-content: center;
     text-align: center;
 }
 
-#single-item-sweets-list li {
+.single-product-list li {
     list-style: none;
     display: inline-block;
     margin: 1em;
 }
 
-#single-item-sweets-list a {
+.single-product-list a {
     font-size: 150%;
 }
 
@@ -200,6 +200,6 @@ strong {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.39);
 }
 
-#single-item-sweets-list ul {
+.single-product-list ul {
     padding: 0;
 }
