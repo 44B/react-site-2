@@ -42,7 +42,7 @@ const products = {
     }
 };
 
-let cart = {
+const cart = {
     data: null,
     load : () => {
         cart.data = localStorage.getItem('cart');
@@ -52,23 +52,24 @@ let cart = {
     save : () => {
         localStorage.setItem('cart', JSON.stringify(cart.data))
     },
-    add : () => {
-        if (cart.data[this.dataset.id] === undefined) {
-            let dataSetId = this.dataset.id;
-            let product = products[dataSetId];
-            cart.data[dataSetId];
-            cart.data[dataSetId] = {
-                name : product['name'],
-                img : product['img'],
-                price : product['price'],
-                qty : 1
-            }
+    add : function() {
+        if (cart.data[this.dataset.id] == undefined) {
+        var product = products[this.dataset.id];
+        cart.data[this.dataset.id] = {
+            name : product['name'],
+            desc : product['desc'],
+            img : product['img'],
+            price : product['price'],
+            qty : 1
+        };
         } else {
             cart.data[this.dataset.id]['qty']++;
         }
+        // Save local storage + HTML update
         cart.save();
         cart.list();
     },
+      
     list: () => {
         let container = document.getElementById("cart-info-items");
         let item = null, part = null, product = null;
@@ -131,53 +132,42 @@ let cart = {
     },
     change : () => {
         // change() : change quantity
-        if (this.value == 0) {
-            delete cart.data[this.dataset.id];
+        if (cart.value == 0) {
+            delete cart.data[cart.dataset.id];
         } else {
-            cart.data[this.dataset.id]['qty'] = this.value;
+            cart.data[cart.dataset.id]['qty'] = cart.value;
         }
         cart.save();
         cart.list();
-        },
+    },
       
-        reset : () => {
-        // reset() : empty cart
-            if (confirm("Empty cart?")) {
-                cart.data = {};
-                cart.save();
-                cart.list();
-            } 
-        },
+    reset : () => {
+    // reset() : empty cart
+        if (confirm("Empty cart?")) {
+            cart.data = {};
+            cart.save();
+            cart.list();
+        } 
+    },
       
-        checkout : () => {
-        // checkout() : checkout the cart
-      
-          alert("TODO");
-          // Forward to confirmation page or directly add name, tel, email fields in the cart list.
-          // Send cart.data to the server and do further processing - email or save to database.
-        }
+    checkout : () => {
+    // checkout() : checkout the cart
+    
+        alert("TODO");
+        // Forward to confirmation page or directly add name, tel, email fields in the cart list.
+        // Send cart.data to the server and do further processing - email or save to database.
+    }
 };
       
-      // Load previous cart and update HTML on load
-    window.addEventListener("load", () => {
-        cart.load();
-        cart.list();
-    });
 
-const renderProducts = () => {
+
     window.addEventListener('load', () => {
         const container = document.getElementById('single-product-list');
         let item = null, part = null;
 
         for (let i in products) {
             item = document.createElement("div");
-            item.type = "button";
-            item.dataset.id = i;
-            item.classList.add("single-product-item")
-            item.addEventListener('click', (e) => {
-                cart.add;
-                console.log(e.target)
-            })
+            item.classList.add("single-product-item");
          
             part = document.createElement("img");
             part.src = products[i]['img'];
@@ -193,16 +183,26 @@ const renderProducts = () => {
             part.innerHTML = products[i]['price'];
             part.classList.add('single-product-price');
             item.appendChild(part);
+
+            part = document.createElement("input");
+            part.type = "button";
+            part.value = "Add to Cart";
+            part.classList.add("single-product-add");
+            part.onclick = cart.add;
+            part.dataset.id = i;
+            item.appendChild(part);
+
             
             container.appendChild(item);
-
+            cart.load();
+            cart.list();
         }
 
         
     });
-}
 
-renderProducts();
+
+
 
 
 // console.log(Object.entries(products))
